@@ -50,4 +50,6 @@ df['year'] = df['release_date'].dt.year
 df['day_of_work'] = df['release_date'].dt.day_name()
 df_time_columns = ['id', 'release_date', 'day', 'month', 'year', 'day_of_work']
 
-df[df_time_columns]
+df[df_columns].to_csv('tmdb_movies.csv', index=False)
+df_genres.to_csv('tmdb_genres.csv', index=False)
+df[df_time_columns].to_csv('tmdb_genres.csv', index=False)
